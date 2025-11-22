@@ -1,0 +1,169 @@
+{
+  "project": "Mya ed Elliott Books",
+  "version": "1.0.0",
+  "description": "Libri illustrati per bambini con HTML/CSS per stampa HD",
+  
+  "print": {
+    "pageSize": {
+      "width": "21cm",
+      "height": "21cm",
+      "unit": "cm"
+    },
+    "margin": {
+      "top": "0cm",
+      "right": "0cm",
+      "bottom": "0cm",
+      "left": "0cm"
+    },
+    "dpi": 300,
+    "colorMode": "RGB",
+    "note": "Convertire a CMYK in post-processing se necessario per stampa offset"
+  },
+
+  "images": {
+    "format": "PNG",
+    "colorSpace": "RGB sRGB",
+    "hasAlpha": true,
+    "targetDPI": 300,
+    "dimensions": {
+      "width": 2480,
+      "height": 1740,
+      "unit": "pixels",
+      "aspectRatio": "1.43:1",
+      "cmFormatWidth": 21,
+      "cmFormatHeight": 14.5
+    },
+    "compression": "PNG (lossless)",
+    "maxFileSize": "5MB per image",
+    "location": "libro-X/images/pagina-XX.png"
+  },
+
+  "books": {
+    "libro-1": {
+      "title": "Mya e l'Uovo Misterioso",
+      "pages": 24,
+      "htmlFile": "libro-1/index.html",
+      "pdfOutput": "output/libro-1.pdf",
+      "theme": "Discovery, Wonder",
+      "colorPalette": [
+        "#87CEEB - Sky blue",
+        "#F4D03F - Sand yellow",
+        "#006994 - Ocean green",
+        "#FFFACD - Beach white"
+      ]
+    },
+    "libro-2": {
+      "title": "Mya ed Elliott - Avventure e Addii",
+      "pages": 24,
+      "htmlFile": "libro-2/index.html",
+      "pdfOutput": "output/libro-2.pdf",
+      "theme": "Growth, Sacrifice, Love",
+      "colorPalette": [
+        "#FFB6C1 to #FF69B4 - Sunset pink",
+        "#4169E1 - Sky blue",
+        "#FFD700 - Golden hour",
+        "#228B22 - Mountain green"
+      ]
+    }
+  },
+
+  "characters": {
+    "mya": {
+      "age": "6 years old (Libro 1) → 12 years old (Libro 2)",
+      "hair": "#8B6F47 - Brown, shoulder-length",
+      "skin": "#F5D5B8 - Fair complexion",
+      "eyes": "#8B4513 - Hazel",
+      "personality": "Curious, kind, caring"
+    },
+    "elliott": {
+      "species": "Small Dragon (cat-sized)",
+      "color": "#50C878 - Emerald green",
+      "wings": "#FF69B4 - Hot pink",
+      "fins": "#FF69B4 - Pink (lateral)",
+      "eyes": "#FFD700 - Golden",
+      "personality": "Playful, wise, loving"
+    }
+  },
+
+  "fonts": {
+    "body": "Segoe UI, Tahoma, Geneva, sans-serif",
+    "heading": "Segoe UI Bold",
+    "size": {
+      "title": "32pt",
+      "subtitle": "18pt",
+      "body": "11-12pt",
+      "pageNumber": "8pt"
+    },
+    "note": "Add custom fonts in assets/fonts/ if needed"
+  },
+
+  "export": {
+    "tool": "Puppeteer (Node.js)",
+    "method": "PDF via headless Chrome",
+    "command": "npm run export-pdf",
+    "options": {
+      "printBackground": true,
+      "pageBreakMode": "CSS page-break-after: always",
+      "scale": 1.0,
+      "timeout": 60000
+    }
+  },
+
+  "qualityChecklist": [
+    "Image dimensions: exactly 2480x1740px",
+    "Image resolution: 300 DPI verified",
+    "Color mode: RGB sRGB (before CMYK conversion)",
+    "File format: PNG with alpha channel",
+    "PDF output: 300 DPI minimum",
+    "Page margins: exactly 0cm on all sides",
+    "Page numbers: visible and correctly ordered",
+    "Text: readable in print size",
+    "Images: no visible artifacts or compression",
+    "Colors: vibrant and accurate",
+    "Print test: physical test on paper"
+  ],
+
+  "workflow": [
+    "1. Write story content in docs/",
+    "2. Generate AI prompts in prompts/",
+    "3. Create illustrations (2480x1740 PNG)",
+    "4. Save raw versions in illustrations-raw/",
+    "5. Optimize and place in libro-X/images/",
+    "6. Update HTML file references if needed",
+    "7. Test in browser: open libro-X/index.html",
+    "8. Generate PDF: npm run export-pdf",
+    "9. QA check PDF in viewer",
+    "10. Convert to CMYK if printing offset",
+    "11. Send to print vendor",
+    "12. Bind and complete"
+  ],
+
+  "git": {
+    "track": [
+      "*.html files",
+      "assets/styles.css",
+      "docs/",
+      "prompts/",
+      "*.md files",
+      "package.json",
+      "export-pdf.js"
+    ],
+    "ignore": [
+      "node_modules/",
+      "illustrations-raw/ (optional)",
+      "output/*.pdf (optional, but useful to track)",
+      ".psd, .ai, .xcf files",
+      "*.log"
+    ],
+    "reason": "Version control for text, layout, and collaboration"
+  },
+
+  "printingNotes": {
+    "domesticPrinting": "Use Puppeteer to generate PDF → print via Windows/Mac print dialog",
+    "offsetPrinting": "Convert RGB → CMYK, provide PDF with CMYK color space",
+    "tipography": "Discuss file format, color space, and binding with printer beforehand",
+    "colourProof": "Request color proof before full print run"
+  },
+
+  "lastUpdated": "2025-11-22"
+}

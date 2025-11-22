@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# Generated PDFs (track only examples, not all output)
+output/*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+.tmp/
+.temp/
+*.tmp
+
+# Large files (immagini raw)
+illustrations-raw/**/*.psd
+illustrations-raw/**/*.ai
+illustrations-raw/**/*.xcf
+
+# Controlla solo file essenziali
+# Puoi aggiungere output/*.pdf a git per track della versione finale

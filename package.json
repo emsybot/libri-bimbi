@@ -1,0 +1,28 @@
+{
+  "name": "mya-elliott-books",
+  "version": "1.0.0",
+  "description": "Libri illustrati per bambini - Mya ed Elliott",
+  "main": "export-pdf.js",
+  "scripts": {
+    "export-pdf": "node export-pdf.js",
+    "export-libro-1": "node export-pdf.js --book libro-1",
+    "export-libro-2": "node export-pdf.js --book libro-2"
+  },
+  "keywords": [
+    "children-books",
+    "illustrations",
+    "pdf-export",
+    "puppeteer"
+  ],
+  "author": "Famiglia Mya",
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

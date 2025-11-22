@@ -1,0 +1,341 @@
+/* Mya ed Elliott - Libro per bambini - Print CSS */
+/* Progettato per stampa HD a 300 DPI */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  height: 100%;
+}
+
+/* Page Setup - 21cm x 21cm */
+@page {
+  size: 21cm 21cm;
+  margin: 0;
+  /* Remove default browser margins */
+  padding: 0;
+}
+
+/* Page Container */
+.page {
+  width: 21cm;
+  height: 21cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  page-break-after: always;
+  page-break-inside: avoid;
+  background-color: white;
+  position: relative;
+  overflow: visible;
+}
+
+/* Pages without image - centered text */
+.page.no-image {
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.4) 0%, rgba(255, 228, 214, 0.2) 100%);
+  position: relative;
+}
+
+.page-text.centered {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* Page Content Area - Leave space for image and text */
+.page-image {
+  width: 100%;
+  height: 14cm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+.page-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  /* Ensure 300 DPI: images should be 2480px x 1740px approximately */
+}
+
+/* Text Area - Bottom portion for story text */
+.page-text {
+  width: 100%;
+  height: 7cm;
+  padding: 0.5cm 0.75cm;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.page-text p {
+  font-size: 16pt;
+  line-height: 1.8;
+  color: #2c3e50;
+  word-wrap: break-word;
+  hyphens: auto;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05cm;
+}
+
+/* For multi-line text */
+.page-text .text-content {
+  font-size: 15pt;
+  line-height: 1.9;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04cm;
+}
+
+/* Testo nelle pagine senza immagine - con cornice delicata */
+.page.no-image .page-text.centered .text-content {
+  border: 2px solid rgba(255, 192, 203, 0.3);
+  border-radius: 1cm;
+  padding: 1.5cm 2cm;
+  background: rgba(255, 250, 245, 0.6);
+  box-shadow: inset 0 0 2cm rgba(255, 228, 214, 0.2);
+}
+
+/* Cover Page - Special styling */
+.page.cover {
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff5e1 0%, #ffe4b5 100%);
+  padding: 0.3cm;
+}
+
+.cover-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.cover-image {
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
+  border-radius: 0.5cm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.5cm;
+}
+
+/* Back Cover / End Page */
+.page.back-cover {
+  justify-content: space-around;
+  background-color: #f8f9fa;
+}
+
+.back-cover-content {
+  width: 100%;
+  height: 100%;
+  padding: 1cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.back-cover-text {
+  font-size: 11pt;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1cm;
+}
+
+.back-cover-title {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.5cm;
+}
+
+/* Pagina Dedica */
+.page.dedication {
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FFF5E1 0%, #FFE4D6 100%);
+}
+
+.dedication-content {
+  width: 100%;
+  height: 100%;
+  padding: 1.5cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dedication-title {
+  font-size: 18pt;
+  color: #FF69B4;
+  font-weight: 700;
+  margin-bottom: 0.3cm;
+  letter-spacing: 0.1cm;
+  text-transform: uppercase;
+}
+
+.dedication-name {
+  font-size: 72pt;
+  color: #8B6F47;
+  font-weight: bold;
+  margin-bottom: 1.5cm;
+  letter-spacing: 0.15cm;
+  text-transform: uppercase;
+}
+
+.dedication-text {
+  font-size: 16pt;
+  line-height: 2;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 2cm;
+  letter-spacing: 0.05cm;
+  text-transform: uppercase;
+}
+
+.dedication-credits {
+  font-size: 13pt;
+  line-height: 2;
+  color: #555;
+  margin-top: auto;
+  font-style: italic;
+  letter-spacing: 0.03cm;
+}
+
+.dedication-credits strong {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.dedication-credits-small {
+  font-size: 11pt;
+  line-height: 1.8;
+  color: #888;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Print-specific styles */
+@media print {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+  
+  /* Force color printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+
+/* Screen display mode (for preview) */
+@media screen {
+  html, body {
+    background-color: #ddd;
+    padding: 1cm;
+  }
+  
+  .page {
+    margin: 1cm auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+  }
+}
+
+/* Page numbers */
+.page-number {
+  position: absolute;
+  bottom: 0.3cm;
+  right: 0.5cm;
+  font-size: 8pt;
+  color: #999;
+  font-style: italic;
+}
+
+/* Draghetto decorativo */
+.draghetto-decorator {
+  position: absolute;
+  bottom: 0.5cm;
+  left: 0.5cm;
+  width: 80px;
+  height: 80px;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+  /* Pagina 1 - Sposta il testo in alto per evitare sovrapposizione con draghetto */
+  .page[data-page="1"] .page-text {
+    position: relative;
+    margin-bottom: 3.5cm;
+  }
+
+  /* Pagina 24 - Sposta il testo in alto per evitare sovrapposizione con draghetto */
+  .page[data-page="24"] .page-text {
+    position: relative;
+    margin-bottom: 4cm;
+  }/* Text wrapping for longer content */
+.long-text {
+  font-size: 10pt;
+  line-height: 1.7;
+}
+
+/* Accessibility - ensure readable contrast */
+body {
+  color: #333;
+  background-color: white;
+}
+
+/* Fallback font for special characters */
+.special-text {
+  font-family: Georgia, serif;
+  font-style: italic;
+}

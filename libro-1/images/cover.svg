@@ -1,0 +1,181 @@
+<svg viewBox="0 0 2480 2480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="sandGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4D03F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8C547;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="watercolor">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="15"/>
+    </filter>
+  </defs>
+  
+  <!-- Sfondo cielo -->
+  <rect width="2480" height="1600" fill="url(#skyGradient)"/>
+  
+  <!-- Sfondo sabbia -->
+  <rect y="1600" width="2480" height="880" fill="url(#sandGradient)"/>
+  
+  <!-- Onde del mare (sfondo) -->
+  <ellipse cx="1240" cy="1400" rx="1200" ry="300" fill="#006994" opacity="0.3"/>
+  <ellipse cx="1240" cy="1500" rx="1000" ry="200" fill="#0088BB" opacity="0.4"/>
+  <ellipse cx="1240" cy="1580" rx="800" ry="150" fill="#00AACC" opacity="0.5"/>
+  
+  <!-- Sabbia con texture -->
+  <circle cx="300" cy="1700" r="150" fill="#F9E5A8" opacity="0.6"/>
+  <circle cx="2100" cy="1900" r="200" fill="#F9E5A8" opacity="0.5"/>
+  <circle cx="1200" cy="2100" r="120" fill="#F9E5A8" opacity="0.4"/>
+  
+  <!-- ELLIOTT (Draghetto) - Corpo principale -->
+  <!-- Corpo verde -->
+  <ellipse cx="650" cy="1200" rx="200" ry="240" fill="#50C878"/>
+  
+  <!-- Testa -->
+  <circle cx="650" cy="900" r="160" fill="#50C878"/>
+  
+  <!-- Collo -->
+  <ellipse cx="650" cy="1050" rx="140" ry="100" fill="#50C878"/>
+  
+  <!-- Occhio sinistro (grande e dolce) -->
+  <circle cx="600" cy="860" r="60" fill="#FFD700"/>
+  <circle cx="605" cy="855" r="35" fill="#2c3e50"/>
+  <circle cx="610" cy="850" r="15" fill="white"/>
+  
+  <!-- Occhio destro -->
+  <circle cx="700" cy="860" r="60" fill="#FFD700"/>
+  <circle cx="705" cy="855" r="35" fill="#2c3e50"/>
+  <circle cx="710" cy="850" r="15" fill="white"/>
+  
+  <!-- Naso -->
+  <ellipse cx="650" cy="920" rx="25" ry="35" fill="#2c3e50"/>
+  
+  <!-- Bocca felice -->
+  <path d="M 620 960 Q 650 990 680 960" stroke="#2c3e50" stroke-width="15" fill="none" stroke-linecap="round"/>
+  
+  <!-- Ciuffo sulla testa (più scuro) -->
+  <path d="M 580 750 Q 650 650 720 750" fill="#3a9b5c" stroke="#3a9b5c" stroke-width="8"/>
+  <ellipse cx="650" cy="700" rx="80" ry="100" fill="#3a9b5c" opacity="0.8"/>
+  
+  <!-- Ali rosa (sinistra) -->
+  <ellipse cx="480" cy="1000" rx="120" ry="180" fill="#FF69B4" opacity="0.9" transform="rotate(-35 480 1000)"/>
+  <path d="M 480 900 Q 420 950 450 1100" stroke="#FF1493" stroke-width="8" fill="none" opacity="0.6"/>
+  
+  <!-- Ali rosa (destra) -->
+  <ellipse cx="820" cy="1000" rx="120" ry="180" fill="#FF69B4" opacity="0.9" transform="rotate(35 820 1000)"/>
+  <path d="M 820 900 Q 880 950 850 1100" stroke="#FF1493" stroke-width="8" fill="none" opacity="0.6"/>
+  
+  <!-- Pinne laterali rosa (sinistra) -->
+  <ellipse cx="480" cy="1200" rx="60" ry="100" fill="#FF69B4" opacity="0.85"/>
+  
+  <!-- Pinne laterali rosa (destra) -->
+  <ellipse cx="820" cy="1200" rx="60" ry="100" fill="#FF69B4" opacity="0.85"/>
+  
+  <!-- Coda -->
+  <path d="M 700 1400 Q 800 1450 750 1600" stroke="#50C878" stroke-width="120" fill="none" stroke-linecap="round"/>
+  <path d="M 710 1420 Q 820 1480 780 1620" stroke="#FF69B4" stroke-width="60" fill="none" stroke-linecap="round" opacity="0.8"/>
+  
+  <!-- MYA (Bambina) -->
+  <!-- Corpo -->
+  <ellipse cx="1600" cy="1300" rx="140" ry="200" fill="#FFD4A3"/>
+  
+  <!-- Testa -->
+  <circle cx="1600" cy="1000" r="140" fill="#F5D5B8"/>
+  
+  <!-- Capelli castani -->
+  <path d="M 1460 920 Q 1460 800 1600 750 Q 1740 800 1740 920" fill="#8B6F47"/>
+  <ellipse cx="1600" cy="850" rx="160" ry="120" fill="#8B6F47"/>
+  
+  <!-- Occhio sinistro -->
+  <circle cx="1540" cy="980" r="45" fill="white"/>
+  <circle cx="1540" cy="980" r="30" fill="#8B4513"/>
+  <circle cx="1545" cy="975" r="12" fill="black"/>
+  <circle cx="1548" cy="972" r="6" fill="white"/>
+  
+  <!-- Occhio destro -->
+  <circle cx="1660" cy="980" r="45" fill="white"/>
+  <circle cx="1660" cy="980" r="30" fill="#8B4513"/>
+  <circle cx="1665" cy="975" r="12" fill="black"/>
+  <circle cx="1668" cy="972" r="6" fill="white"/>
+  
+  <!-- Naso -->
+  <ellipse cx="1600" cy="1030" rx="20" ry="30" fill="#D4A574"/>
+  
+  <!-- Bocca sorridente -->
+  <path d="M 1570 1070 Q 1600 1095 1630 1070" stroke="#D17F6E" stroke-width="12" fill="none" stroke-linecap="round"/>
+  
+  <!-- Guance rosate -->
+  <circle cx="1480" cy="1040" r="50" fill="#FFB6C1" opacity="0.6"/>
+  <circle cx="1720" cy="1040" r="50" fill="#FFB6C1" opacity="0.6"/>
+  
+  <!-- Vestito rosa -->
+  <path d="M 1480 1120 L 1460 1400 L 1740 1400 L 1720 1120 Z" fill="#FFB6D9"/>
+  <path d="M 1480 1120 Q 1540 1140 1600 1140 Q 1660 1140 1720 1120" fill="#FF69B4" opacity="0.3"/>
+  
+  <!-- Braccio sinistro (abbraccia Elliott) -->
+  <ellipse cx="1350" cy="1250" rx="70" ry="150" fill="#FFD4A3" opacity="0.9" transform="rotate(-25 1350 1250)"/>
+  
+  <!-- Braccio destro -->
+  <ellipse cx="1850" cy="1280" rx="70" ry="150" fill="#FFD4A3" opacity="0.9" transform="rotate(30 1850 1280)"/>
+  
+  <!-- Gambe -->
+  <ellipse cx="1540" cy="1500" rx="50" ry="120" fill="#FFD4A3"/>
+  <ellipse cx="1660" cy="1500" rx="50" ry="120" fill="#FFD4A3"/>
+  
+  <!-- Scarpe -->
+  <ellipse cx="1540" cy="1620" rx="60" ry="40" fill="#FF6B9D"/>
+  <ellipse cx="1660" cy="1620" rx="60" ry="40" fill="#FF6B9D"/>
+  
+  <!-- Capelli lunghi (spalle) -->
+  <ellipse cx="1380" cy="1100" rx="80" ry="100" fill="#8B6F47" opacity="0.7"/>
+  <ellipse cx="1820" cy="1100" rx="80" ry="100" fill="#8B6F47" opacity="0.7"/>
+  
+  <!-- Elliott nel braccio di Mya - Più piccolo -->
+  <g opacity="0.95">
+    <!-- Corpo -->
+    <ellipse cx="1380" cy="1150" rx="90" ry="110" fill="#50C878"/>
+    <!-- Testa -->
+    <circle cx="1380" cy="1000" r="90" fill="#50C878"/>
+    <!-- Occhio -->
+    <circle cx="1360" cy="990" r="30" fill="#FFD700"/>
+    <circle cx="1365" cy="985" r="18" fill="#2c3e50"/>
+    <!-- Ali -->
+    <ellipse cx="1310" cy="1070" rx="70" ry="100" fill="#FF69B4" opacity="0.8" transform="rotate(-30 1310 1070)"/>
+    <ellipse cx="1450" cy="1070" rx="70" ry="100" fill="#FF69B4" opacity="0.8" transform="rotate(30 1450 1070)"/>
+    <!-- Coda -->
+    <path d="M 1420 1200 Q 1450 1250 1420 1320" stroke="#50C878" stroke-width="60" fill="none" stroke-linecap="round"/>
+    <path d="M 1425 1210 Q 1460 1260 1435 1330" stroke="#FF69B4" stroke-width="30" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Stelle decorative -->
+  <circle cx="400" cy="400" r="40" fill="#FFD700" opacity="0.6"/>
+  <circle cx="2100" cy="500" r="35" fill="#FFD700" opacity="0.5"/>
+  <circle cx="1800" cy="300" r="30" fill="#FFD700" opacity="0.4"/>
+  
+  <!-- Nuvole leggere -->
+  <ellipse cx="300" cy="500" rx="150" ry="80" fill="white" opacity="0.4"/>
+  <ellipse cx="450" cy="480" rx="120" ry="70" fill="white" opacity="0.4"/>
+  <ellipse cx="2200" cy="600" rx="140" ry="75" fill="white" opacity="0.35"/>
+  
+  <!-- Titolo background (rettangolo semi-trasparente) -->
+  <rect x="300" y="1900" width="1880" height="400" fill="white" opacity="0.85" rx="40"/>
+  
+  <!-- Titolo del libro -->
+  <text x="1240" y="2080" font-family="Arial, sans-serif" font-size="140" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    MYA
+  </text>
+  <text x="1240" y="2220" font-family="Arial, sans-serif" font-size="140" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    E L'UOVO
+  </text>
+  <text x="1240" y="2340" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#FF69B4">
+    MISTERIOSO
+  </text>
+  
+  <!-- Decorazione sotto titolo -->
+  <line x1="600" y1="2400" x2="1880" y2="2400" stroke="#FF69B4" stroke-width="15" opacity="0.6"/>
+</svg>
