@@ -17,7 +17,7 @@
   "author": "Famiglia Mya",
   "license": "MIT",
   "devDependencies": {
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^24.15.0"
   },
   "engines": {
     "node": ">=14.0.0"
