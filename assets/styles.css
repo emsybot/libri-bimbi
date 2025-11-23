@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
   height: 100%;
@@ -187,6 +188,73 @@ html, body {
   margin-bottom: 0.5cm;
 }
 
+/* Bookmark Back Cover Page */
+.page.bookmark-page {
+  background: linear-gradient(135deg, #FFF5E1 0%, #FFE4D6 100%);
+  padding: 0.8cm 1cm;
+}
+
+.bookmark-title {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #FF69B4;
+  margin-bottom: 0.3cm;
+  text-transform: uppercase;
+  letter-spacing: 0.08cm;
+}
+
+.bookmark-instructions {
+  font-size: 12pt;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin-bottom: 0.6cm;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04cm;
+}
+
+.bookmark-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3cm auto;
+  padding: 0.4cm;
+  border: 3px dashed #FF69B4;
+  border-radius: 0.5cm;
+  background: rgba(255, 255, 255, 0.7);
+  max-width: 8cm;
+}
+
+.bookmark-image {
+  max-width: 6cm;
+  max-height: 8cm;
+  object-fit: contain;
+  display: block;
+}
+
+.scissors-icon {
+  position: absolute;
+  top: -0.5cm;
+  right: -0.5cm;
+  font-size: 24pt;
+  transform: rotate(45deg);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.bookmark-footer {
+  font-size: 9pt;
+  line-height: 1.5;
+  color: #555;
+  margin-top: 0.3cm;
+  font-style: italic;
+}
+
+.bookmark-footer strong {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
 /* Pagina Dedica */
 .page.dedication {
   justify-content: center;
@@ -255,40 +323,54 @@ html, body {
   font-weight: 400;
 }
 
-/* Print-specific styles */
-@media print {
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .page {
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-  }
-  
-  /* Force color printing */
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    color-adjust: exact !important;
-  }
+/* Coloring Page */
+.page.coloring-page {
+  background: linear-gradient(135deg, #FFF5E1 0%, #FFE4D6 100%);
+  padding: 1cm;
 }
 
-/* Screen display mode (for preview) */
-@media screen {
-  html, body {
-    background-color: #ddd;
-    padding: 1cm;
-  }
-  
-  .page {
-    margin: 1cm auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-  }
+.coloring-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.coloring-title {
+  font-size: 22pt;
+  font-weight: bold;
+  color: #50C878;
+  margin-bottom: 0.4cm;
+  text-transform: uppercase;
+  letter-spacing: 0.1cm;
+}
+
+.coloring-instructions {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin-bottom: 0.8cm;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04cm;
+}
+
+.coloring-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 16cm;
+  max-height: 14cm;
+}
+
+.coloring-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* Page numbers */
@@ -312,17 +394,19 @@ html, body {
   z-index: 1;
 }
 
-  /* Pagina 1 - Sposta il testo in alto per evitare sovrapposizione con draghetto */
-  .page[data-page="1"] .page-text {
-    position: relative;
-    margin-bottom: 3.5cm;
-  }
+/* Pagina 1 - Sposta il testo in alto per evitare sovrapposizione con draghetto */
+.page[data-page="1"] .page-text {
+  position: relative;
+  margin-bottom: 3.5cm;
+}
 
-  /* Pagina 24 - Sposta il testo in alto per evitare sovrapposizione con draghetto */
-  .page[data-page="24"] .page-text {
-    position: relative;
-    margin-bottom: 4cm;
-  }/* Text wrapping for longer content */
+/* Pagina 24 - Sposta il testo in alto per evitare sovrapposizione con draghetto */
+.page[data-page="24"] .page-text {
+  position: relative;
+  margin-bottom: 4cm;
+}
+
+/* Text wrapping for longer content */
 .long-text {
   font-size: 10pt;
   line-height: 1.7;
@@ -338,4 +422,44 @@ body {
 .special-text {
   font-family: Georgia, serif;
   font-style: italic;
+}
+
+/* Print-specific styles */
+@media print {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  /* Force color printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+
+/* Screen display mode (for preview) */
+@media screen {
+
+  html,
+  body {
+    background-color: #ddd;
+    padding: 1cm;
+  }
+
+  .page {
+    margin: 1cm auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+  }
 }
