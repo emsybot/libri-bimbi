@@ -463,3 +463,95 @@ body {
     border: 1px solid #ccc;
   }
 }
+
+/* ========================================
+   DECORAZIONI MAGICHE
+   ======================================== */
+
+/* Stelle e scintille per pagine solo testo */
+.page.no-image::before {
+  content: '\2726';
+  position: absolute;
+  top: 2cm;
+  right: 3cm;
+  font-size: 14pt;
+  color: rgba(255, 215, 0, 0.3);
+  z-index: 1;
+}
+
+.page.no-image::after {
+  content: '\2727';
+  position: absolute;
+  bottom: 3cm;
+  left: 2.5cm;
+  font-size: 12pt;
+  color: rgba(255, 192, 203, 0.25);
+  z-index: 1;
+}
+
+/* Stelle aggiuntive sparse - usando nth-child per variare le posizioni */
+.page.no-image:nth-child(3n) .text-content::before {
+  content: '\2605';
+  position: absolute;
+  top: -1.5cm;
+  left: 4cm;
+  font-size: 10pt;
+  color: rgba(255, 215, 0, 0.2);
+  z-index: 1;
+}
+
+.page.no-image:nth-child(3n+1) .text-content::after {
+  content: '\2728';
+  position: absolute;
+  bottom: -2cm;
+  right: 5cm;
+  font-size: 11pt;
+  color: rgba(255, 182, 193, 0.25);
+  z-index: 1;
+}
+
+/* Impronte di Elliott - piccole zampe di drago sui bordi */
+.page:nth-child(4n+2)::before {
+  content: '\1F43E';
+  position: absolute;
+  bottom: 0.3cm;
+  left: 3cm;
+  font-size: 8pt;
+  opacity: 0.15;
+  z-index: 0;
+  transform: rotate(-15deg);
+}
+
+.page:nth-child(4n)::after {
+  content: '\1F43E';
+  position: absolute;
+  top: 0.5cm;
+  right: 2cm;
+  font-size: 8pt;
+  opacity: 0.15;
+  z-index: 0;
+  transform: rotate(25deg);
+}
+
+/* Impronte alternate per creare effetto "camminata" */
+.page:nth-child(5n+1) .page-text::before {
+  content: '\1F43E';
+  position: absolute;
+  top: -0.8cm;
+  left: 6cm;
+  font-size: 7pt;
+  opacity: 0.12;
+  z-index: 0;
+  transform: rotate(10deg);
+}
+
+.page:nth-child(5n+3) .page-text::after {
+  content: '\1F43E';
+  position: absolute;
+  bottom: -0.5cm;
+  right: 7cm;
+  font-size: 7pt;
+  opacity: 0.12;
+  z-index: 0;
+  transform: rotate(-20deg);
+}
